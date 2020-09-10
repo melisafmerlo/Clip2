@@ -1,0 +1,114 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Adivinanza</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body>
+
+		<!-- Header -->
+        <header id="header" class="alt">
+            <h1><strong><a href="index.html">Spatial</a></strong> by Templated</h1>
+            <nav id="nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="otraPagina.html">Salud</a></li>
+                    <li><a href="adivinanza.html">Adivinanza</a></li>
+                    <li><a href="https://es.wikipedia.org/wiki/B%C3%B3xer">wiki</a></li>
+
+                </ul>
+            </nav>
+        </header>
+
+			<a href="#menu" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+
+		<!-- Main -->
+			<section id="main" class="wrapper">
+				<div class="container">
+
+					<header class="major special">
+                        <h2>adivinanza</h2>
+                        <section>
+                        <div class="box alt">
+                            <div class="row 50% uniform">
+                                <div class="12u$"><span class="image fit"><img src="images/pic03.jpg" alt="" /></span></div>
+                            </div>
+                        </div>
+                         </section>
+					</header>
+
+                    <section id="one" class="wrapper style1">
+                    
+                        <h3>¿En que año aparecio el primer Boxer?</h3>
+                        <h2 id="contador"></h2>
+                        <form >
+                            <div class="row uniform 50%">
+                                <div class="6u 12u$(xsmall)">
+                                    <input type="number" class="form-control" id="intento" placeholder="Example input">                                </div>
+
+                                <div class="12u$">
+                                    <ul class="actions">
+                                        <button type="submit" class="btn btn-primary" id="boton" onclick="funcion()">Enviar</button>
+                                        
+                                    </ul>
+                                </div>
+                            </div>
+                        </form>
+                    </section>
+               
+				</div>
+			</section>
+
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+            <script src="assets/js/main.js"></script>
+             
+
+            <script>
+               function funcion(){        
+                var intento = document.getElementById("intento").value;
+                var nIntentos=0;
+                var respuesta=1895;
+                
+            
+                if(intento ==="")
+                   {alert("Ingrese un numero");}  
+                  
+                  else{
+                    nIntentos++;
+                    while(nIntentos<3){
+                    
+                            if(intento==respuesta){
+                                alert("Acerto!!!");
+                                break;
+                            }
+                            else if(intento<respuesta){
+                                alert("Pista : el año es mayor");
+                                break;
+                            }
+                            else if(intento>respuesta){
+                                alert("Pista :el año es menor");
+                                break;
+                            }       
+                        
+                        }
+                  }
+               // document.getElementById("contador").innerHTML = "Te quedan : "+nIntentos;
+ 
+             }
+             
+         
+            </script>
+
+
+
+ 
+
+	</body>
+</html>
